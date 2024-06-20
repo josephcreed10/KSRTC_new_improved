@@ -1,12 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBus, faUserTie, faClipboard, faCogs, faSignOutAlt, faRoad } from '@fortawesome/free-solid-svg-icons';
+import { faBus, faUserTie, faClipboard, faCogs, faSignOutAlt, faRoad, faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import './SideMenu.css';
 
 function SideMenu({ onMenuClick }) {
   return (
     <div className="side-menu">
       <ul className="menu-list">
+      <li onClick={() => onMenuClick('Dasboard')}>
+          <FontAwesomeIcon icon={faUserGroup} className="menu-icon" />
+          <span>Dashboard</span>
+        </li>
         <li onClick={() => onMenuClick('Schedule')}>
           <FontAwesomeIcon icon={faClipboard} className="menu-icon" />
           <span>Schedule</span>
