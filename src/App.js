@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import TopNav from './components/TopNav';
+import SideMenu from './components/SideMenu';
+import RoutesTable from './components/RoutesTable'; // Import RoutesTable component
 
 function App() {
+  const [activePage, setActivePage] = useState(''); // State to manage active page
+
+  const handleMenuClick = (menuItem) => {
+    setActivePage(menuItem); // Set active page based on menu item clicked
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopNav />
+      <div className="main-layout">
+        <SideMenu onMenuClick={handleMenuClick} />
+        <div className="content">
+          {activePage === 'Schedule' && <RoutesTable />} {/* Conditionally render RoutesTable */}
+        </div>
+      </div>
     </div>
   );
 }

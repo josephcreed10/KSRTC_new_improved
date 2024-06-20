@@ -1,0 +1,96 @@
+.routes-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .generate-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    float: right;
+  }
+  
+  .routes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .routes-table th, .routes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .routes-table th {
+    background-color: #f8f9fa;
+  }
+  
+  .summary-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .summary-container div {
+    flex: 1 1 30%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .routes-table, .routes-table thead, .routes-table tbody, .routes-table th, .routes-table td, .routes-table tr { 
+      display: block; 
+    }
+  
+    .routes-table tr {
+      margin-bottom: 15px;
+    }
+  
+    .routes-table td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+  
+    .routes-table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .generate-button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .summary-container div {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }

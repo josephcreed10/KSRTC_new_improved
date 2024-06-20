@@ -1,0 +1,52 @@
+.side-menu {
+    width: 250px; 
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 10px 0;
+    border-right: 1px solid #ddd;
+    box-shadow: 4px 0px 20px 0px #0000000d;
+  }
+  
+ 
+.menu-list {
+        position: absolute; /* Position absolutely relative to the parent */
+        top: 82px; /* Distance from the top of the container */
+        left: 18px; /* Distance from the left of the container */
+        width: 220px; /* Width of the menu list */
+        height: 179px; /* Height of each menu item */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        list-style-type: none; /* Remove default list styling */
+      }
+  
+.menu-list-bottom {
+    position: absolute; /* Position absolutely relative to the parent */
+    bottom: 20px; /* Distance from the bottom of the container */
+    left: 18px; /* Distance from the left of the container */
+    width: 220px; /* Width of the menu list */
+    height: 84px; /* Height of each menu item */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style-type: none; /* Remove default list styling */
+  }
+.menu-list li, .menu-list-bottom li {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #334D6E;
+  }
+  
+.menu-list li:hover, .menu-list-bottom li:hover {
+    background-color: #e9ecef;
+    opacity: 1;
+  }
+  
+.menu-icon {
+    margin-right: 14px; /* Adjust margins as needed */
+    color: #6c757d;
+    min-width: 24px; /* Ensure icon container has minimum width */
+  }
+  
