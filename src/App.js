@@ -3,11 +3,16 @@ import './App.css';
 import TopNav from './components/TopNav';
 import SideMenu from './components/SideMenu';
 import RoutesTable from './components/RoutesTable'; // Import RoutesTable component
+import Dashboard from './components/Dashboard';
+import DepoRoutes from './components/DepoRoutes';
+import Employees from './components/Employees';
+import Vehicles from './components/Vehicles';
 
 function App() {
-  const [activePage, setActivePage] = useState(''); // State to manage active page
+  const [activePage, setActivePage] = useState('Dashboard'); // State to manage active page
 
   const handleMenuClick = (menuItem) => {
+    console.log(`Menu item clicked: ${menuItem}`);
     setActivePage(menuItem); // Set active page based on menu item clicked
   };
 
@@ -17,7 +22,11 @@ function App() {
       <div className="main-layout">
         <SideMenu onMenuClick={handleMenuClick} />
         <div className="content">
+          {activePage === 'Dashboard' && <Dashboard />}
           {activePage === 'Schedule' && <RoutesTable />} {/* Conditionally render RoutesTable */}
+          {activePage === 'DepoRoutes' && <DepoRoutes />}
+          {activePage === 'Employees' && <Employees />}
+          {activePage === 'Vehicles' && <Vehicles />}
         </div>
       </div>
     </div>

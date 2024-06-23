@@ -17,7 +17,7 @@ const RoutesTable = () => {
     <div className="routes-container">
       <h2>Trip 1</h2>
       <input type="text" className="search" placeholder="Search" />
-      <button className="generate-button">Regenerate</button>
+      <button className="regenerate-button">Regenerate</button>
       <table className="routes-table">
         <thead>
           <tr>
