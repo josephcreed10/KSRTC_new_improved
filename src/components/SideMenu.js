@@ -39,7 +39,7 @@ function SideMenu({ onMenuClick }) {
           <FontAwesomeIcon icon={faCogs} className="menu-icon" />
           <span>Settings</span>
         </li>
-        <li onClick={() => onMenuClick('Logout')}>
+        <li onClick={() => onMenuClick('LogOut')}>
           <FontAwesomeIcon icon={faSignOutAlt} className="menu-icon" />
           <span>Logout</span>
         </li>

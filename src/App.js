@@ -7,6 +7,8 @@ import Dashboard from './components/Dashboard';
 import DepoRoutes from './components/DepoRoutes';
 import Employees from './components/Employees';
 import Vehicles from './components/Vehicles';
+import Settings from './components/Settings';
+import LogOut from './components/LogOut';
 
 function App() {
   const [activePage, setActivePage] = useState('Dashboard'); // State to manage active page
@@ -27,6 +29,8 @@ function App() {
           {activePage === 'DepoRoutes' && <DepoRoutes />}
           {activePage === 'Employees' && <Employees />}
           {activePage === 'Vehicles' && <Vehicles />}
+          {activePage === 'Settings' && <Settings />}
+          {activePage === 'LogOut' && <LogOut />}
         </div>
       </div>
     </div>

@@ -1,0 +1,17 @@
+.LogoutSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    height: auto; /* Adjust height as needed for full viewport height */
+    margin-top: 10%;
+  }
+  
+  .LogoutNotice {
+    margin-bottom: 30px; /* Optional: Add spacing between notice and buttons */
+  }
+  
+  .LogoutButtons {
+    display: flex;
+    gap: 50px; /* Optional: Add space between buttons */
+  }
+  
